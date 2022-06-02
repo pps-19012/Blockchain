@@ -1,7 +1,7 @@
 # Blockchain
 Blockchain projects coming soon...
 
-## Bitcoin Whitepaper
+## [Bitcoin Whitepaper](https://bitcoin.org/bitcoin.pdf)
 > A purely peer-to-peer version of electronic cash would allow online
 payments to be sent directly from one party to another without going through a
 financial institution. Digital signatures provide part of the solution, but the main
