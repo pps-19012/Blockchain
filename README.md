@@ -28,3 +28,17 @@ attack the network, they'll generate the longest chain and outpace attackers. Th
 network itself requires minimal structure. Messages are broadcast on a best effort
 basis, and nodes can leave and rejoin the network at will, accepting the longest
 proof-of-work chain as proof of what happened while they were gone.
+
+## Blockchain Nodes
+#### Main network
+- Persistent
+- Real Blockchain
+- Costs money
+#### Test Networks
+- Persistent but can be deleted
+- Real Blockchain
+- Beta Release
+#### Developer Networks (like Ganache)
+- Unit Testing
+- Fast
+- Non-persistent
