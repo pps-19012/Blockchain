@@ -1,6 +1,5 @@
 # Remix Project files
-Orgininally made for **Remix - Ethereum IDE**, can also run on personal/local blockchain providers like Ganache or Ganache cli. Run these in Remix IDE to obtain the results.
-
+Orgininally made for **Remix - Ethereum IDE**, can also run on personal/local blockchain providers like Ganache or Ganache cli.
 ### Process
 - Select a compiler version of your choice.
 - Adjust the solidity version in code accordingly.
