@@ -31,10 +31,13 @@ contract StartStopUpdate {
         selfdestruct(_to);
     }
 
-//     Without CREATE2, a contract gets deployed to an address that is computed based on your address + your nonce. That way it was guaranteed that a Smart Contract cannot be re-deployed to the same address.
+// Without CREATE2, a contract gets deployed to an address that is computed based on your address + your nonce. 
+// That way it was guaranteed that a Smart Contract cannot be re-deployed to the same address.
 
-// With the CREATE2 op-code you can instruct the EVM to place your Smart Contract on a specific address. Then you could call selfdestruct(), thus remove the source code. Then re-deploy a different Smart Contract to the same address.
+// With the CREATE2 op-code you can instruct the EVM to place your Smart Contract on a specific address. 
+// Then you could call selfdestruct(), thus remove the source code. Then re-deploy a different Smart Contract to the same address.
 
-// This comes with several implications: when you see that a Smart Contract includes a selfdestruct() then simply be careful. Those implications will become more and more apparent as you progress through the course, especially when we talk about the ERC20 Token allowance.
+// This comes with several implications: when you see that a Smart Contract includes a selfdestruct() then simply be careful. 
+// Those implications will become more and more apparent as you progress through the course, especially when we talk about the ERC20 Token allowance.
 
 }
