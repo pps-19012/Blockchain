@@ -51,6 +51,28 @@ proof-of-work chain as proof of what happened while they were gone.
 - small change gives different hash value.
 - infeasible to find two different messages with same hash value.
 
+## Smart contract
+- State machine: needs transaction to change state. Can do logic operations.
+- State change happens only through **mining** or **transaction**.
+- Turing complete.
+- Languages: Solidity, Vyper, Serpent, LLL, Mutan
+
+## Variables 
+- intialized by default. There is no null or undefined value
+- reference type need a memory location (memory/stoarge)
+- Address:
+  - holds 20 byte values.
+  - has a member _balance_ which has balance in Wei
+- Strings and Bytes
+  - Both are special arrays. 
+  - Expensive.
+  - String is equal to bytes but does not have a length of index-access.
+  - Bytes for arbitrary length raw data. String for arbitrary length string (UTF-8) data.
+- All variables are statically typed.
+- Not all rules to development apply as 
+    - limited resources
+    - variable initialization
+
 
 
 
