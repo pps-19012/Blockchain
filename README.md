@@ -81,9 +81,11 @@ proof-of-work chain as proof of what happened while they were gone.
 - ```.call.gas().value()``` lets you forward a specific amount of gas. Also returns a boolean.
 - ```.send(), .transfer()``` both only transfer 2300 gas along.
 
-
-
-
+## Global Objects
+- help understand transaction logistics. Properties:
+  - ```msg.sender``` - Address of the account that initialized the transaction.
+  - ```msg.value``` - Amount of Ether sent along.
+  - ```now``` - curernt timestamp. (Beware, this can be influenced).
 
 
 
