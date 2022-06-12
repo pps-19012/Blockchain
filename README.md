@@ -87,7 +87,11 @@ proof-of-work chain as proof of what happened while they were gone.
   - ```msg.value``` - Amount of Ether sent along.
   - ```now``` - curernt timestamp. (Beware, this can be influenced).
 
+## Payable functions 
+- Function cannot receive Ether unless marked as _payable_.
+- If function not marked as _payable_ receive Ether the transaction fails.
 
-
+## Mapping
+- mapping (eg. __keyType_ => __valueType_)
 
 
