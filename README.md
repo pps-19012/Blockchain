@@ -77,7 +77,9 @@ proof-of-work chain as proof of what happened while they were gone.
 - members ``` address myAddress = "0xabc123..."```
   - ```myAddress.balance``` => balance in Wei
   - ```myAddress.transfer``` => transfer from smart contract (amount in Wei)
-
+- low-level calls => ```.send()``` returns a boolean. Doesn't cascade exceptions.
+- ```.call.gas().value()``` lets you forward a specific amount of gas. Also returns a boolean.
+- ```.send(), .transfer()``` both only transfer 2300 gas along.
 
 
 
