@@ -73,6 +73,10 @@ proof-of-work chain as proof of what happened while they were gone.
     - limited resources
     - variable initialization
 
+## Address
+- members ``` address myAddress = "0xabc123..."```
+  - ```myAddress.balance``` => balance in Wei
+  - ```myAddress.transfer``` => transfer from smart contract (amount in Wei)
 
 
 
