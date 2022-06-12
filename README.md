@@ -42,3 +42,22 @@ proof-of-work chain as proof of what happened while they were gone.
 - Unit Testing
 - Fast
 - Non-persistent
+
+## Cryptographic Hashing
+#### Properties:
+- deterministic, i.e. same output for same input.
+- quick to compute.
+- infeasible to generate a message from hash value.
+- small change gives different hash value.
+- infeasible to find two different messages with same hash value.
+
+
+
+
+
+
+
+
+
+
+
