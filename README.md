@@ -94,4 +94,15 @@ proof-of-work chain as proof of what happened while they were gone.
 ## Mapping
 - mapping (eg. __keyType_ => __valueType_)
 
+## Fungible vs Non-Fungible Tokens
+### Non-Fungible tokens are:
+- Non interchangeable.
+- Unique.
+- Non-divisible (to some degree).
+- ERC-721 standard.
 
+### Fungible tokens are:
+- Interchangeable.
+- Unique.
+- Divisible.
+- ERC-20 or ERC-777 standard.
