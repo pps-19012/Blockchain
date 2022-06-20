@@ -103,6 +103,6 @@ proof-of-work chain as proof of what happened while they were gone.
 
 ### Fungible tokens are:
 - Interchangeable.
-- Unique.
+- Uniform.
 - Divisible.
 - ERC-20 or ERC-777 standard.
