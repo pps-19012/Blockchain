@@ -106,3 +106,5 @@ proof-of-work chain as proof of what happened while they were gone.
 - Uniform.
 - Divisible.
 - ERC-20 or ERC-777 standard.
+
+Crowdsale contract - https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/crowdsale/Crowdsale.sol
