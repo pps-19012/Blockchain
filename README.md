@@ -121,6 +121,7 @@ The creators of Ethereum wanted to make sure someone couldn't clog up the networ
 
 ## [require() vs assert()](https://ethereum.stackexchange.com/questions/15166/difference-between-require-and-assert-and-the-difference-between-revert-and-thro)
 <details><summary> Differences and explanantion</summary>
+  
 There are two aspects to consider when choosing between assert() and require()
 
 - Gas efficiency
