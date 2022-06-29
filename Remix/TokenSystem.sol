@@ -35,7 +35,7 @@ contract TokenSystem is Owned {
     }
 
     function purchaseToken() public payable {
-        require((tokenBalance[owner]*tokenPrice)/msg.value > 0, "Not enough tokens to purchase");
+        require((tokenBalance[owner]*tokenPrice)/msg.value > 0, "Not enough tokens to purchase"); //not optimal
         tokenBalance[owner] -= msg.value / tokenPrice;
         tokenBalance[msg.sender] += msg.value / tokenPrice;
     }
