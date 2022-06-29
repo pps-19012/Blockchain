@@ -119,5 +119,47 @@ Ethereum is like a big, slow, but extremely secure computer. When you execute a 
 
 The creators of Ethereum wanted to make sure someone couldn't clog up the network with an infinite loop, or hog all the network resources with really intensive computations. So they made it so transactions aren't free, and users have to pay for computation time as well as storage.
 
+<details><summary>
+## [require() vs assert()](https://ethereum.stackexchange.com/questions/15166/difference-between-require-and-assert-and-the-difference-between-revert-and-thro)
+</summary>
+There are two aspects to consider when choosing between assert() and require()
+
+- Gas efficiency
+- Bytecode analysis
+1. Gas efficiency
+assert(false) compiles to 0xfe, which is an invalid opcode, using up all remaining gas, and reverting all changes.
+
+require(false) compiles to 0xfd which is the REVERT opcode, meaning it will refund the remaining gas. The opcode can also return a value (useful for debugging), but I don't believe that is supported in Solidity as of this moment. (2017-11-21)
+
+2. Bytecode analysis
+From the docs (emphasis mine)
+
+The require function should be used to ensure valid conditions, such as inputs, or contract state variables are met, or to validate return values from calls to external contracts. If used properly, analysis tools can evaluate your contract to identify the conditions and function calls which will reach a failing assert. Properly functioning code should never reach a failing assert statement; if this happens there is a bug in your contract which you should fix.
+
+The above excerpt is a reference to the still (as of 2017-11-21) experimental and undocumented SMTChecker.
+
+I use a few heuristics to help me decide which to use.
+
+Use require() to:
+- Validate user inputs
+- Validate the response from an external contract ie. use require(external.send(amount))
+- Validate state conditions prior to executing state changing operations, for example in an owned contract situation
+- Generally, you should use require more often,
+- Generally, it will be used towards the beginning of a function.
+  
+Use assert() to:
+- check for overflow/underflow
+- check invariants
+- validate contract state after making changes
+- avoid conditions which should never, ever be possible.
+- Generally, you should use assert less often
+- Generally, it will be use towards the end of your function.
+- Basically, assert is just there to prevent anything really bad from happening, but it shouldn't be possible for the condition to evaluate to false.
+
+Historical note:
+The require() and assert() functions were added to Solidity prior to the Byzantium fork, in v0.4.10. Prior to Byzantium, they behaved identically, but already compiled to different opcodes. This meant that some contracts deployed before Byzantium behaved differently after the fork, the main difference being that began refunding unused gas.  
+</details>
+
+
 ## Crowdsale contract:
 https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/crowdsale/Crowdsale.sol
