@@ -119,16 +119,15 @@ Ethereum is like a big, slow, but extremely secure computer. When you execute a 
 
 The creators of Ethereum wanted to make sure someone couldn't clog up the network with an infinite loop, or hog all the network resources with really intensive computations. So they made it so transactions aren't free, and users have to pay for computation time as well as storage.
 
-<details><summary>
 ## [require() vs assert()](https://ethereum.stackexchange.com/questions/15166/difference-between-require-and-assert-and-the-difference-between-revert-and-thro)
-</summary>
+<details><summary> Differences and explanantion</summary>
 There are two aspects to consider when choosing between assert() and require()
 
 - Gas efficiency
 - Bytecode analysis
 1. Gas efficiency
 assert(false) compiles to 0xfe, which is an invalid opcode, using up all remaining gas, and reverting all changes.
-
+  
 require(false) compiles to 0xfd which is the REVERT opcode, meaning it will refund the remaining gas. The opcode can also return a value (useful for debugging), but I don't believe that is supported in Solidity as of this moment. (2017-11-21)
 
 2. Bytecode analysis
